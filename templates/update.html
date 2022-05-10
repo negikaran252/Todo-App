@@ -1,0 +1,18 @@
+{% extends 'nav-base.html' %}
+{% block base_body %}
+<div class="container my-4">
+    <h2>UpdateTodo</h2>
+    <form action="/update/{{todo.id}}" method="POST">
+        <div class="mb-3">
+            <label for="todo-title" class="form-label">Todo Title</label>
+            <input type="text" class="form-control" value="{{todo.title}}" name="title" id="todo-title">
+        </div>
+        <div class="mb-3">
+            <label for="todo-desc" class="form-label">Todo Description</label>
+            <input type="text" class="form-control" value="{{todo.desc}}" name="desc" id="todo-desc">
+        </div>
+        <button type="submit" class="btn btn-success">Update Todo</button>
+    </form>
+</div>
+
+{% endblock base_body %}
